@@ -1,37 +1,18 @@
-/**
- * ShiftCipher class represents a shift cipher encryption and decryption algorithm.
- */
 class ShiftCipher {
-  /**
-   * Creates an instance of ShiftCipher with a specified shift value.
-   * @param {number} positionsToShift - The numerical value of the shift.
-   */
+
   constructor(positionsToShift) {
     this._shift = positionsToShift;
     this._alphabetArray = "abcdefghijklmnopqrstuvwxyz".split("");
   }
 
-  /**
-   * Gets the current shift value.
-   * @returns {number} The numerical value of the shift.
-   */
   get shift() {
     return this._shift;
   }
 
-  /**
-   * Gets the array of lowercase alphabet letters.
-   * @returns {Array} Array of lowercase alphabet letters.
-   */
   get alphabetArray() {
     return this._alphabetArray;
   }
 
-  /**
-   * Encrypts a plain text message using the shift cipher algorithm.
-   * @param {string} word - The plain text message to be encrypted.
-   * @returns {string} The capitalized encrypted message.
-   */
   encrypt(word) {
     word = word.toLowerCase();
     let encryptedWord = "";
@@ -55,11 +36,6 @@ class ShiftCipher {
     return encryptedWord.toUpperCase();
   }
 
-  /**
-   * Decrypts an encrypted message using the shift cipher algorithm.
-   * @param {string} word - The encrypted message to be decrypted.
-   * @returns {string} The lowercase decrypted message.
-   */
   decrypt(word) {
     word = word.toLowerCase();
     let decryptedWord = "";
